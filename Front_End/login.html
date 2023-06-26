@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div class="main">
+      <form onsubmit="event.preventDefault();">
+        <h3><u><b>Login Page</b></u></h3>
+
+        <label for="emp_code">Employee Code No</label>
+        <input type="text" placeholder="Enter Employee Code" id="emp_code" />
+
+        <label for="password">Password</label>
+        <input type="password" placeholder="Password" id="password" />
+
+        <div class="social">
+          <button onclick="login()">Submit</button>
+          <button>Reset</button>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script src="login.js"></script>
+</html>

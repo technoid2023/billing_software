@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forpatientuse</title>
+    <link rel="stylesheet" href="home.css">
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- ofcanvas nav -->
+    <div id="mySidenav" class="sidenav">
+        <h2>Menu</h2>
+        <br>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="homepage.html">Create Ticket</a>
+        <a href="listing.html">View Tickets</a>
+        <a href="listing.html">Print Invoice</a>
+      </div>
+      
+      <div id="main">
+        <h2 class="section-header">
+        <span style="font-size:30px;cursor:pointer;float: left; color: rgb(0, 0, 0);" onclick="openNav()">&#9776; open</span>
+        <b style="color: black;" id="name"></b>
+            <button type="button" class="btn-float-right" onclick="logout()">Log out</button>
+    </h2>  
+    </div>
+<br>
+    <div class="row">
+      <h3>
+       <center> <u><b>Ticket Details</b></u>
+      </h3></center>
+    
+      <br><hr>
+      <div class="col">
+        <!-- Name input -->
+        <div class="form-outline">
+          <h4 style="font-weight: bolder; font-size: large;">Category</h4>
+          <input type="text" id="category" class="form-control" placeholder="Enter Item Category" />
+       
+        </div>
+      </div>
+    
+      <div class="col">
+        <!-- Email input -->
+        <div class="form-outline">
+          <h4 style="font-weight: bolder; font-size: large;">Sub Category</h4>
+          <input type="email" id="sub_category" class="form-control" placeholder="Enter Item Sub Category" />
+        
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col">
+        <!-- Name input -->
+        <div class="form-outline">
+          <h4 style="font-weight: bolder; font-size: large;">Customer Name</h4>
+          <input type="text" id="nm" class="form-control" placeholder="Enter Item Owner Name"/>
+   
+        </div>
+      </div>
+      <div class="col">
+        <!-- Name input -->
+        <div class="form-outline">
+          <h4 style="font-weight: bolder; font-size: large;">Customer Mobile</h4>
+          <input type="number" id="mobile" class="form-control" placeholder="Enter Item Owner Mobile" />
+       
+        </div>
+      </div>
+      <div class="col">
+        <!-- Email input -->
+        <div class="form-outline">
+          <h4 style="font-weight: bolder; font-size: large;">Customer Email</h4>
+
+          <input type="email" id="email" class="form-control" placeholder="Enter Item Owner Email"/>
+       
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <!-- Name input -->
+        <div class="form-outline">
+          <h4 style="font-weight: bolder; font-size: large;">Item Name</h4>
+
+          <input type="text" id="item" class="form-control" placeholder="Enter Item Name"/>
+   
+        </div>
+      </div>
+      <div class="col">
+        <!-- Name input -->
+        <div class="form-outline">
+          <h4 style="font-weight: bolder; font-size: large;">Item Brand</h4>
+
+          <input type="text" id="brand" class="form-control" placeholder="Enter Item Brand" />
+       
+        </div>
+      </div>
+      <div class="col">
+        <!-- Email input -->
+        <div class="form-outline">
+          <h4 style="font-weight: bolder; font-size: large;">Item Colour</h4>
+
+          <input type="email" id="color" class="form-control" placeholder="Enter Item Color"/>
+       
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <!-- Name input -->
+        <div class="form-outline">
+          <h4 style="font-weight: bolder; font-size: large;">Model No</h4>
+
+          <input type="text" id="model_no" class="form-control" placeholder="Enter Item Model No"/>
+   
+        </div>
+      </div>
+      <div class="col">
+        <!-- Name input -->
+        <div class="form-outline">
+          <h4 style="font-weight: bolder; font-size: large;">Serial No</h4>
+
+          <input type="number" id="serial_no" class="form-control" placeholder="Enter Item Serial No"/>
+       
+        </div>
+      </div>
+      
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="col">
+        <!-- Name input -->
+        <div class="form-outline">
+          <h4 style="font-weight: bolder; font-size: large;">Issues</h4>
+
+          <textarea id="issue" placeholder="Enter Item Issues" rows="3" cols="95"></textarea>
+           </div>
+            </div>     
+       </div>
+     
+       <div class="row">
+        <div class="col">
+          <!-- Name input -->
+          <div class="form-outline">
+            <h4 style="font-weight: bolder; font-size: large;">Service Requirements</h4>
+            <input type="text" id="requirements" class="form-control" placeholder="Enter Item Service Requirements"/>
+     
+          </div>
+        </div></div>
+      
+        <div class="row">
+          <div class="col">
+            <!-- Name input -->
+            <div class="form-outline">
+               <h4 style="font-weight: bolder; font-size: large;"> Service Charge</h4>
+              <input type="number" id="fees" class="form-control" placeholder="Enter Service Charge"/>
+       
+            </div>
+          </div>
+          <div class="col">
+            <!-- Name input -->
+            <label for="status">Status :</label>
+            <select id="status" name="cars">
+              <option value="accepted">Accepted</option>
+              <option value="rejected">Rejected</option>
+              <option value="on service">On Service</option>
+              <option value="closed">Closed</option>
+            </select>
+          </div>
+          </div>
+        
+          <div class="row">
+            <button style="max-width: fit-content; margin-left: 19rem;" class="btn btn-success" onclick="updateTicket()">Update</button>
+            <button style="max-width: fit-content; margin-left: 1rem;" class="btn btn-danger" onclick="delTicket()">Delete</button>
+         
+          </div>
+          
+          <div class="row">
+          
+            <button style="max-width: fit-content; margin-left: 18rem;" class="btn btn-primary" onclick="generatePdf()">Download Acknowledge</button>
+          </div>
+    
+</body>
+<script src="https://unpkg.com/jspdf-invoice-template@1.4.0/dist/index.js"></script>
+<script src="detail.js"></script>
+</html>

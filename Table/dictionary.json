@@ -1,0 +1,87 @@
+{
+    "user": {
+        "name": {
+            "type": "String"
+        },
+       
+        "emp_code": {
+            "type": "Number",
+            "unique": true
+        },
+        "password": {
+            "type": "String"
+        }
+    },
+    "jwt": {
+        "token": {
+            "type": "String"
+        },
+        "name": {
+            "type": "String"
+        },
+        "Built_Time": {
+            "type": "Date"
+        },
+        "logout": {
+            "type": "Boolean"
+        }
+    },
+    "ticket": {
+        "category": {
+            "type": "String"
+        },
+        "subcat": {
+            "type": "String"
+        },
+        "item": {
+            "type": "String"
+        },
+        "model_no": {
+            "type": "String"
+        },
+        "serial_no": {
+            "type": "Number"
+        },
+        "color": {
+            "type": "String"
+        },
+        
+        "brand": {
+            "type": "String"
+        },
+        
+        "owner": {
+            "type": "String"
+        },
+        
+        "owner_mobile": {
+            "type": "Number"    
+        },
+        
+        "owner_email": {
+            "type": "String"
+        },
+        "date":{
+            "type":"String"
+        },
+        "issued_by":{
+            "type":"Number"
+        },
+        
+        "issue": {
+            "type": "String"
+        },
+        
+        "status": {
+            "type": "String"
+        },
+        
+        "requirements": {
+            "type": "String"
+        },
+        
+        "estimated_fees": {
+            "type": "Number"
+        }
+    }
+}
