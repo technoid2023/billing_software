@@ -5,7 +5,7 @@ const axios = require('axios');
 const { log } = require("console");
 const spawn = require('child_process').spawn;
 function connect() {
-    const url = "mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.8.0";
+    const url = "mongodb+srv://technoidkolkata:technoid123@cluster0.iivynkd.mongodb.net/";
     const connection = mongoose.createConnection(url,
         { useNewUrlParser: true, useUnifiedTopology: true })
     return connection;
