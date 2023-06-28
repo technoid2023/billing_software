@@ -15,7 +15,7 @@ async function logout(){
     let data=localStorage.getItem('user');
     let token=data.token
     console.log(token);
-    await fetch("http://127.0.0.1:8111/bill/logout", {
+    await fetch("https://technoid-bill.onrender.com/bill/logout", {
       headers: {
         "Content-type": "application/json",
         'Connection': "keep-alive",
@@ -54,7 +54,7 @@ async function createTicket(){
 let x=(document.getElementById("xxx").value);
   let z=localStorage.getItem('user');
     let z1=JSON.parse(z);
-  await fetch("http://127.0.0.1:8111/bill/ticket/add", {
+  await fetch("https://technoid-bill.onrender.com/bill/ticket/add", {
     headers: {
       "Content-type": "application/json",
       'Connection': "keep-alive",

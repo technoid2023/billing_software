@@ -15,7 +15,7 @@ async function logout(){
     let data=localStorage.getItem('user');
     let token=data.token
     console.log(token);
-    await fetch("http://127.0.0.1:8111/bill/logout", {
+    await fetch("https://technoid-bill.onrender.com/bill/logout", {
       headers: {
         "Content-type": "application/json",
         'Connection': "keep-alive",
@@ -50,7 +50,7 @@ function openNav() {
     let id=(localStorage.getItem('ticket_id'));
 
   console.log(id);
-    await fetch(`http://127.0.0.1:8111/bill/ticket/${id}`, {
+    await fetch(`https://technoid-bill.onrender.com/bill/ticket/${id}`, {
       headers: {
         "Content-type": "application/json",
         'Connection': "keep-alive",
@@ -87,7 +87,7 @@ document.getElementById("status").value=json.Data[0].status
     let z=localStorage.getItem('user');
       let z1=JSON.parse(z);
       let id=localStorage.getItem('ticket_id')
-    await fetch(`http://127.0.0.1:8111/bill/ticket/${id}`, {
+    await fetch(`https://technoid-bill.onrender.com/bill/ticket/${id}`, {
       headers: {
         "Content-type": "application/json",
         'Connection': "keep-alive",
@@ -143,7 +143,7 @@ document.getElementById("status").value=json.Data[0].status
   console.log(id);
     
   if (confirm('Are Your Sure ?') == true) {
-    await fetch(`http://127.0.0.1:8111/bill/ticket/${id}`, {
+    await fetch(`https://technoid-bill.onrender.com/bill/ticket/${id}`, {
       headers: {
         "Content-type": "application/json",
         'Connection': "keep-alive",
@@ -164,12 +164,12 @@ document.getElementById("status").value=json.Data[0].status
     location.assign('detail.html')
   }
 }
-function generatePdf(){
+async function generatePdf(){
 //  console.log(15);
   var pdfObject = jsPDFInvoiceTemplate.default(props);
   console.log('saved',pdfObject);
 }
-var ticket=JSON.parse(localStorage.getItem('ticket'));
+var ticket= JSON.parse(localStorage.getItem('ticket'));
 var props = {
   outputType: jsPDFInvoiceTemplate.OutputType.Save,
   returnJsPDFDocObject: true,

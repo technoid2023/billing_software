@@ -12,7 +12,7 @@ async function logout(){
     let data=localStorage.getItem('user');
     let token=data.token
     console.log(token);
-    await fetch("http://127.0.0.1:8111/bill/logout", {
+    await fetch("https://technoid-bill.onrender.com/bill/logout", {
       headers: {
         "Content-type": "application/json",
         'Connection': "keep-alive",
@@ -45,7 +45,7 @@ function openNav() {
     let token=z.Token
     // console.log(token);
   
-    await fetch(`http://127.0.0.1:8111/bill/ticket`, {
+    await fetch(`https://technoid-bill.onrender.com/bill/ticket`, {
       headers: {
         "Content-type": "application/json",
         'Connection': "keep-alive",
@@ -97,7 +97,7 @@ function openNav() {
     let token=z.Token
   let cat=document.getElementById('search').value;
   
-    await fetch(`http://127.0.0.1:8111/bill/ticket`, {
+    await fetch(`https://technoid-bill.onrender.com/bill/ticket`, {
       headers: {
         "Content-type": "application/json",
         'Connection': "keep-alive",

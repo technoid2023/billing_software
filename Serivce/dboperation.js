@@ -74,13 +74,16 @@ operation.userRegistration = async (data) => {
     })
 }
 operation.alltickets = async (page, limit) => {
+    // console.log('ooo');
     return new Promise(async (resolve, reject) => {
         let skipElements = page != undefined ? (page - 1) * limit : 0;
         let limitTo = limit != undefined ? limit : 20;
         let conn = connect();
         let coll = conn.useDb('billing');
         let userModel = coll.model("tickets", sch.ticketSchema());
+        console.log(userModel);
         let ticketData = await userModel.find({}, { deleted: 0 }, { skip: skipElements, limit: limitTo });
+        // console.log(ticketData);
         conn.close();
         if (ticketData.length != 0) {
             resolve({
