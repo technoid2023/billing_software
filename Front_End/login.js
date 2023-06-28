@@ -5,7 +5,7 @@ async function login() {
     console.log(typeof pass);
     let data1;
     let data;
-     await fetch("http://127.0.0.1:8111/bill/login", {
+     await fetch("https://technoid-bill.onrender.com/bill/login", {
       headers: {
         "Content-type": "application/json",
         'Connection': "keep-alive",
